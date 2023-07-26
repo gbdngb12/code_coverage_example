@@ -39,6 +39,7 @@ $ objdump -M intel -d ./a.out
 ```
 ### C code
 ```C
+// trace-pc-guard-cb.cc
 extern "C" void __sanitizer_cov_trace_pc_guard_init(
     uint32_t *start/*guard 변수 시작 부분 __TMC_END__*/,
     uint32_t *stop/*guard 변수 끝 부분 __bss_start*/) {
